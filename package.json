@@ -1,0 +1,7 @@
+{
+  "name": "situs",
+  "private": true,
+  "workspaces": [
+    "src/*"
+  ]
+}
