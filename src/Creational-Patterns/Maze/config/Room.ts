@@ -20,10 +20,13 @@ export class Room extends MapSite {
         switch (direction) {
             case Direction.North:
                 this.#up = site;
+                break;
             case Direction.South:
                 this.#down = site;
+                break;
             case Direction.West:
                 this.#left = site;
+                break;
             case Direction.East:
                 this.#right = site;
         }

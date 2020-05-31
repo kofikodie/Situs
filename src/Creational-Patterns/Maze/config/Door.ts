@@ -7,7 +7,9 @@ export class Door extends MapSite {
     constructor(private roomOne: Room, private roomTwo: Room) {
         super();
         this.#doorNumber = Door.doorCount++;
-        console.log(`Creating a Door# ${this.#doorNumber} between ${this.roomOne} and ${this.roomTwo}`);
+        console.log(
+            `Creating a Door# ${this.#doorNumber} between ${this.roomOne.toString()} and ${this.roomTwo.toString()}`,
+        );
     }
 
     toString(): string {
