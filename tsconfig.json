@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "ESNext",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": "."
+    },
+    "exclude": ["__tests__"]
+}
