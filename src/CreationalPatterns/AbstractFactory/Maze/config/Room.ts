@@ -5,10 +5,10 @@ export class Room extends MapSite {
     private static roomCount = 1;
     #roomNumber: number;
 
-    #up: MapSite;
-    #down: MapSite;
-    #right: MapSite;
-    #left: MapSite;
+    #up?: MapSite;
+    #down?: MapSite;
+    #right?: MapSite;
+    #left?: MapSite;
 
     constructor() {
         super();

@@ -1,15 +1,17 @@
 import { Maze } from './Maze';
-import { Room } from './Room';
-import { Door } from './Door';
 import { Direction } from './Direction';
 import { Wall } from './Wall';
+import { MazeFactory } from '../factory/MazeFactory';
 
 export class MazeGame {
-    createMaze(): Maze {
-        const maze = new Maze();
-        const roomOne = new Room();
-        const roomTwo = new Room();
-        const theDoor = new Door(roomOne, roomTwo);
+    createMaze(factor: MazeFactory): Maze {
+        const maze = factor.makeMaze();
+        const roomOne = factor.makeRoom();
+        const roomTwo = factor.makeRoom();
+        const theDoor = factor.makeDoor(roomOne, roomTwo);
+
+        maze.addRoom(roomOne);
+        maze.addRoom(roomTwo);
 
         roomOne.setSide(Direction.North, new Wall());
         roomOne.setSide(Direction.West, theDoor);
