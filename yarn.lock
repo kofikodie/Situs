@@ -155,7 +155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.0.6":
+"@types/node@npm:*":
   version: 14.0.6
   resolution: "@types/node@npm:14.0.6"
   checksum: 3/14c184ce392941d016aa94479eca2d33517756a9e48d0b03ba6e258128b513dc28dc524f85cc0591e12be9d804beff6aadc4b3159555c6ffdd1d1ab8f46d41da
@@ -166,6 +166,13 @@ __metadata:
   version: 13.13.9
   resolution: "@types/node@npm:13.13.9"
   checksum: 3/fd13f4106913baa04bf6cf0b4606a5313ec2755cf9ea182cdfc253179ae0d1d27f30127c97ba6e878f5e570af31e45dc1719f3bbc40f651a71ac64cc11420f06
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.0.6":
+  version: 14.0.9
+  resolution: "@types/node@npm:14.0.9"
+  checksum: 3/4166fd08927bbf73c6de360519e1eae4c032f419c2c5cd9abd939d3f258cac8059cca4add61c7f129cc850b2e28af6565862b67f1142147e8e2498f0fc6b2aff
   languageName: node
   linkType: hard
 
@@ -692,9 +699,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"creational_patterns@workspace:src/Creational-Patterns":
+"creational_patterns@workspace:src/CreationalPatterns/AbstractFactory":
   version: 0.0.0-use.local
-  resolution: "creational_patterns@workspace:src/Creational-Patterns"
+  resolution: "creational_patterns@workspace:src/CreationalPatterns/AbstractFactory"
   dependencies:
     "@types/node": ^14.0.6
     "@typescript-eslint/eslint-plugin": ^3.0.2

@@ -2,7 +2,7 @@
     "name": "situs",
     "private": true,
     "workspaces": [
-        "src/*"
+        "src/**"
     ],
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^3.0.2",
