@@ -4,7 +4,6 @@
     "description": "simplicity is the ultimate sophistication",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
         "lint": "eslint . --ext .ts",
         "lint-fix": "eslint . --fix --ext .ts",
         "pretty": "prettier --check {*.ts,**/*.ts,**/**}",
