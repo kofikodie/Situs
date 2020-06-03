@@ -1,9 +1,10 @@
 import { Maze } from '../config/Maze';
-import { Wall } from '../config/Wall';
-import { Room } from '../config/Room';
-import { Door } from '../config/Door';
+import { Wall } from '../components/Wall';
+import { Room } from '../components/Room';
+import { Door } from '../components/Door';
+import { FactoryInterface } from '../interface/FactoryInterface';
 
-export class MazeFactory {
+export class MazeFactory implements FactoryInterface<MazeFactory> {
     makeMaze(): Maze {
         return new Maze();
     }

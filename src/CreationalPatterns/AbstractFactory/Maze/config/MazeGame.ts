@@ -1,10 +1,15 @@
 import { Maze } from './Maze';
 import { Direction } from './Direction';
-import { Wall } from './Wall';
+import { Wall } from '../components/Wall';
 import { MazeFactory } from '../factory/MazeFactory';
+import { FactoryInterface } from '../interface/FactoryInterface';
+import { BombedMazeFactory } from '../factory/BombedMazeFactory';
+import { BombedWall } from '../bomed/BombedWall';
 
-export class MazeGame {
-    createMaze(factor: MazeFactory): Maze {
+export class MazeGame<T extends MazeFactory | BombedMazeFactory> {
+    constructor(private wall: Wall | BombedWall) {}
+
+    createMaze<T>(factor: FactoryInterface<T>): Maze {
         const maze = factor.makeMaze();
         const roomOne = factor.makeRoom();
         const roomTwo = factor.makeRoom();
@@ -13,12 +18,12 @@ export class MazeGame {
         maze.addRoom(roomOne);
         maze.addRoom(roomTwo);
 
-        roomOne.setSide(Direction.North, new Wall());
+        roomOne.setSide(Direction.North, this.wall);
         roomOne.setSide(Direction.West, theDoor);
-        roomOne.setSide(Direction.East, new Wall());
-        roomOne.setSide(Direction.South, new Wall());
-        roomTwo.setSide(Direction.West, new Wall());
-        roomTwo.setSide(Direction.North, new Wall());
+        roomOne.setSide(Direction.East, this.wall);
+        roomOne.setSide(Direction.South, this.wall);
+        roomTwo.setSide(Direction.West, this.wall);
+        roomTwo.setSide(Direction.North, this.wall);
         roomTwo.setSide(Direction.South, theDoor);
 
         return maze;

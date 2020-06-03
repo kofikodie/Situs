@@ -1,4 +1,4 @@
-import { MapSite } from './MapSite';
+import { MapSite } from '../config/MapSite';
 
 export class Wall extends MapSite {
     private static wallCount = 1;

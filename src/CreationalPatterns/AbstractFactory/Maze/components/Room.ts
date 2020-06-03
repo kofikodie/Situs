@@ -1,5 +1,5 @@
-import { MapSite } from './MapSite';
-import { Direction } from './Direction';
+import { MapSite } from '../config/MapSite';
+import { Direction } from '../config/Direction';
 
 export class Room extends MapSite {
     private static roomCount = 1;
