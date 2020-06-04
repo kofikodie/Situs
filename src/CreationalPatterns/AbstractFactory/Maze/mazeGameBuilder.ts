@@ -5,7 +5,7 @@ import { Wall } from './components/Wall';
 import { BombedWall } from './bomed/BombedWall';
 
 const game = new MazeGame<MazeFactory>(new Wall());
-game.createMaze(new BombedMazeFactory());
+game.createMaze(new MazeFactory());
 
 console.log('Game one has initialized \n');
 

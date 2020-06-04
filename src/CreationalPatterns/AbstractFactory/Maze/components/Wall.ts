@@ -1,16 +1,11 @@
-import { MapSite } from '../config/MapSite';
+import { WallInterface } from '../interface/WallInterface';
 
-export class Wall extends MapSite {
-    private static wallCount = 1;
-    #wallNumber: number;
-
+export class Wall implements WallInterface {
     constructor() {
-        super();
-        this.#wallNumber = Wall.wallCount++;
-        console.log(`creating Wall# ${this.#wallNumber}`);
+        console.log(`creating a Wall`);
     }
 
     toString(): string {
-        return `Wall# ${this.#wallNumber}`;
+        return `a Wall`;
     }
 }

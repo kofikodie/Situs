@@ -1,13 +1,12 @@
 import { Maze } from './Maze';
 import { Direction } from './Direction';
-import { Wall } from '../components/Wall';
 import { MazeFactory } from '../factory/MazeFactory';
 import { FactoryInterface } from '../interface/FactoryInterface';
 import { BombedMazeFactory } from '../factory/BombedMazeFactory';
-import { BombedWall } from '../bomed/BombedWall';
+import { WallInterface } from '../interface/WallInterface';
 
 export class MazeGame<T extends MazeFactory | BombedMazeFactory> {
-    constructor(private wall: Wall | BombedWall) {}
+    constructor(private wall: WallInterface) {}
 
     createMaze<T>(factor: FactoryInterface<T>): Maze {
         const maze = factor.makeMaze();
