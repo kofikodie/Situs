@@ -11,5 +11,6 @@ gen_enforced_dependency(WorkspaceCwd, DependencyIdent, null, devDependencies) :-
   DependencyIdent \= 'jest', 
   DependencyIdent \= 'prettier', 
   DependencyIdent \= 'ts-jest', 
-  DependencyIdent \= 'ts-node', 
+  DependencyIdent \= 'ts-node',
+  DependencyIdent \= '@yarnpkg/pnpify',
   DependencyIdent \= 'typescript'.
