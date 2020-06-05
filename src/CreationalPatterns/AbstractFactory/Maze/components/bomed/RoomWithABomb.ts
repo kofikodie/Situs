@@ -1,4 +1,4 @@
-import { Room } from '../components/Room';
+import { Room } from '../Room';
 
 export class RoomWithABomb extends Room {
     toString(): string {

@@ -1,4 +1,4 @@
-import { WallInterface } from '../interface/WallInterface';
+import { WallInterface } from '../../interface/WallInterface';
 
 export class BombedWall implements WallInterface {
     constructor() {

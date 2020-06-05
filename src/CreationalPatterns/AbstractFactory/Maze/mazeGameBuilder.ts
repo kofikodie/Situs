@@ -2,7 +2,7 @@ import { MazeGame } from './config/MazeGame';
 import { MazeFactory } from './factory/MazeFactory';
 import { BombedMazeFactory } from './factory/BombedMazeFactory';
 import { Wall } from './components/Wall';
-import { BombedWall } from './bomed/BombedWall';
+import { BombedWall } from './components/bomed/BombedWall';
 
 const game = new MazeGame<MazeFactory>(new Wall());
 game.createMaze(new MazeFactory());

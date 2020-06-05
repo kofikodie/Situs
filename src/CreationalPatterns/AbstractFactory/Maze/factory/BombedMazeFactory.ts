@@ -1,9 +1,9 @@
 import { FactoryInterface } from '../interface/FactoryInterface';
-import { BombedWall } from '../bomed/BombedWall';
+import { BombedWall } from '../components/bomed/BombedWall';
 import { Maze } from '../config/Maze';
 import { Room } from '../components/Room';
 import { Door } from '../components/Door';
-import { RoomWithABomb } from '../bomed/RoomWithABomb';
+import { RoomWithABomb } from '../components/bomed/RoomWithABomb';
 
 export class BombedMazeFactory implements FactoryInterface<BombedMazeFactory> {
     makeMaze(): Maze {
