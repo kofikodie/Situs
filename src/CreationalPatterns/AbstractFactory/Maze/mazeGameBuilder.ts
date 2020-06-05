@@ -7,7 +7,7 @@ import { BombedWall } from './bomed/BombedWall';
 const game = new MazeGame<MazeFactory>(new Wall());
 game.createMaze(new MazeFactory());
 
-console.log('Game one has initialized \n');
+console.log('Game one has been initialized \n');
 
 const gameTwo = new MazeGame<BombedMazeFactory>(new BombedWall());
 gameTwo.createMaze(new BombedMazeFactory());

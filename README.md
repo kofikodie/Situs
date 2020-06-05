@@ -1,6 +1,7 @@
 # SITUS
 
-```Simplicity is the ultimate sophistication.```
+`Simplicity is the ultimate sophistication.`
+
 When once you have tasted flight, you will forever walk the earth with your eyes turned skyward, for there you have been, and there you will always long to return.
 Learning never exhausts the mind.
 Art is never finished, only abandoned.
