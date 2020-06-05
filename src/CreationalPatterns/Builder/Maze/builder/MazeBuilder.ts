@@ -1,3 +1,5 @@
+import { Door } from '../component/Door';
+
 export class MazeBuilder {
     #roomNum = 0;
     #roomFrom = 0;
@@ -13,8 +15,7 @@ export class MazeBuilder {
     }
 
     buildDoor(rFrom: number, rTo: number): MazeBuilder {
-        this.#roomNum = rFrom;
-        this.#roomTo = rTo;
+        new Door(rFrom, rTo);
         return this;
     }
 
