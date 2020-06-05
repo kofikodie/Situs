@@ -29,3 +29,10 @@ Separate the construction of a complex object from its representation so that th
 -   Director notifies the builder whenever a part of the product should be built
 -   Builder handles request from the director and adds parts to the product.
 -   the client retrieves the product from the builder
+
+### Applicability
+
+    Use this pattern when:
+
+-   the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled
+-   the construction process must allow different rappresentations for the object that's constructed
