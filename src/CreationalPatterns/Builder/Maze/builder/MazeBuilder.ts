@@ -1,6 +1,8 @@
 import { Door } from '../component/Door';
+import { MazeBuilderInterface } from './MazeBuilderInterface';
+import { Room } from '../component/Room';
 
-export class MazeBuilder {
+export class MazeBuilder implements MazeBuilderInterface<MazeBuilder> {
     #roomNum = 0;
     #roomFrom = 0;
     #roomTo = 0;
@@ -10,7 +12,7 @@ export class MazeBuilder {
     }
 
     buildRoom(room: number): MazeBuilder {
-        this.#roomNum = room;
+        new Room(room);
         return this;
     }
 
