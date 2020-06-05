@@ -2,8 +2,8 @@ import { MapSite } from '../config/MapSite';
 import { Direction } from '../config/Direction';
 
 export class Room extends MapSite {
-    private static roomCount = 1;
-    #roomNumber: number;
+    protected static roomCount = 1;
+    protected roomNumber: number;
 
     #up?: MapSite;
     #down?: MapSite;
@@ -12,8 +12,8 @@ export class Room extends MapSite {
 
     constructor() {
         super();
-        this.#roomNumber = Room.roomCount++;
-        console.log(`Creating a room ${this.#roomNumber}`);
+        this.roomNumber = Room.roomCount++;
+        console.log(`Creating a room ${this.roomNumber}`);
     }
 
     setSide(direction: Direction, site: MapSite): void {
@@ -35,6 +35,6 @@ export class Room extends MapSite {
     }
 
     toString(): string {
-        return `Room# ${this.#roomNumber}`;
+        return `Room# ${this.roomNumber}`;
     }
 }
