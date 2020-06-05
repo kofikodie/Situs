@@ -1,11 +1,13 @@
-import { MazeBuilder } from './builder/MazeBuilder';
+import { MazeBuilder } from '../builder/MazeBuilder';
+import { Maze } from './Maze';
 
 export class MazeGame {
     constructor(private mazeGameBuilder: MazeBuilder) {}
 
-    creazeMaze(): number {
+    creazeMaze(): Maze {
         this.mazeGameBuilder.buildRoom(3);
-        this.mazeGameBuilder.buildDoor(1, 5);
+        this.mazeGameBuilder.buildRoom(5);
+        this.mazeGameBuilder.buildDoor(3, 5);
         this.mazeGameBuilder.buildMaze();
 
         return this.mazeGameBuilder.getMaze();

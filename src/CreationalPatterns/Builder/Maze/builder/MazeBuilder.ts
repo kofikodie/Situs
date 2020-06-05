@@ -1,14 +1,13 @@
 import { Door } from '../component/Door';
 import { MazeBuilderInterface } from './MazeBuilderInterface';
 import { Room } from '../component/Room';
+import { Maze } from '../config/Maze';
 
 export class MazeBuilder implements MazeBuilderInterface<MazeBuilder> {
-    #roomNum = 0;
-    #roomFrom = 0;
-    #roomTo = 0;
+    private aMaze: Maze = '';
 
     buildMaze(): void {
-        this.#roomNum += this.#roomFrom + this.#roomTo;
+        this.aMaze = new Maze();
     }
 
     buildRoom(room: number): MazeBuilder {
@@ -21,7 +20,7 @@ export class MazeBuilder implements MazeBuilderInterface<MazeBuilder> {
         return this;
     }
 
-    getMaze(): number {
-        return this.#roomNum;
+    getMaze(): Maze {
+        return this.aMaze;
     }
 }

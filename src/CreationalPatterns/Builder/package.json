@@ -8,7 +8,7 @@
         "lint-fix": "eslint . --fix --ext .ts",
         "pretty": "prettier --check {*.ts,**/*.ts,**/**}",
         "pretty-fix": "prettier --write {*.ts,**/*.ts,**/**}",
-        "start": "ts-node Maze/gameInit.ts"
+        "start": "ts-node Maze/mazeGameBuilder.ts"
     },
     "repository": {
         "type": "git",
