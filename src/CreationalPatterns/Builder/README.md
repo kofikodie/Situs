@@ -13,7 +13,7 @@ Separate the construction of a complex object from its representation so that th
 
 -   _Builder_
 
-    -   specifies an abstract an inferface for creating parts of a "Product" object
+    -   specifies an abstract an inferface for creating parts of a "Product" object.
 
 -   _ConcreteBuilder_
 
@@ -23,7 +23,7 @@ Separate the construction of a complex object from its representation so that th
 
 -   _Director_
 
-    -   contructor an object using the Builder interface
+    -   contructor an object using the Builder interface.
 
 -   _Product_
 
@@ -33,6 +33,6 @@ Separate the construction of a complex object from its representation so that th
 ### Colaborations
 
 -   the clients creates the Director object and configures it with the desired Builder object.
--   Director notifies the builder whenever a part of the product should be built
+-   Director notifies the builder whenever a part of the product should be built.
 -   Builder handles request from the director and adds parts to the product.
--   the client retrieves the product from the builder
+-   the client retrieves the product from the builder.

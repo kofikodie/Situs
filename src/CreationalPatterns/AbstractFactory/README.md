@@ -15,15 +15,15 @@ Provide an interface for creating families of related or dependent objects witho
 
 -   _AbstractFactory_
 
-    -   declares an interface for operations that create abstract product objects
+    -   declares an interface for operations that create abstract product objects.
 
 -   _ConcreteFactory_
 
-    -   implements the opeartions to create concrete product objects
+    -   implements the opeartions to create concrete product objects.
 
 -   _AbstractProduct_
 
-    -   declares an interface for a type of product object
+    -   declares an interface for a type of product object.
 
 -   _ConcreteProduct_
 
@@ -32,7 +32,7 @@ Provide an interface for creating families of related or dependent objects witho
 
 -   _Client_
 
-    -   uses only interfaces delared by "AbstractFactory" and "AbsstractProduct" classes.
+    -   uses only interfaces delared by "AbstractFactory" and "AbstractProduct" classes.
 
 ### Collaborations
 
