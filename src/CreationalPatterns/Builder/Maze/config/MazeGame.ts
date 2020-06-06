@@ -24,9 +24,9 @@ export class MazeGame {
 
     createComplexMaze(): Maze {
         this.mazeComplexGameBuilder.buildMaze();
-        this.mazeComplexGameBuilder.buildRoom(15);
-        this.mazeComplexGameBuilder.buildRoom(17);
-        this.mazeComplexGameBuilder.buildDoor(15, 17);
+        const roomOne = this.mazeComplexGameBuilder.buildRoom(15);
+        const roomTwo = this.mazeComplexGameBuilder.buildRoom(17);
+        this.mazeComplexGameBuilder.buildDoor(roomOne, roomTwo);
 
         return this.mazeComplexGameBuilder.getMaze();
     }

@@ -7,7 +7,7 @@ export class Room {
     #right!: MapSite;
     #left!: MapSite;
 
-    constructor(private roomNumber: number) {
+    constructor(public readonly roomNumber: number) {
         console.log(`Creating a Room# ${this.roomNumber}`);
     }
 

@@ -12,21 +12,31 @@ export class ComplexMazeBuilder extends MazeBuilder {
         return direction;
     }
 
-    buildRoom(roomNumber: number): void {
+    buildRoom(roomNumber: number): Room {
         const room = new Room(roomNumber);
         this.currentMaze.addRoom(room);
         room.setSide(Direction.North, new Wall());
         room.setSide(Direction.South, new Wall());
         room.setSide(Direction.West, new Wall());
         room.setSide(Direction.East, new Wall());
+
+        return room;
     }
 
-    buildDoor(roomOneNumber: number, roomTwoNumber: number): void {
-        const roomOne = new Room(roomOneNumber).getRoom();
-        const roomTwo = new Room(roomTwoNumber).getRoom();
+    buildDoor(roomOneNumber: number, roomTwoNumber: number): void;
 
-        const door = new Door(roomOneNumber, roomTwoNumber);
-        roomOne.setSide(this.commonWall(roomOne, roomTwo), door);
-        roomTwo.setSide(this.commonWall(roomOne, roomTwo), door);
+    buildDoor(roomOneNumber: number | Room, roomTwoNumber: number | Room): void;
+
+    buildDoor(roomOneNumber: number | Room, roomTwoNumber: number | Room): void {
+        if (typeof roomOneNumber !== 'number' && typeof roomTwoNumber !== 'number') {
+            const roomOne = roomOneNumber.getRoom();
+            const roomTwo = roomTwoNumber.getRoom();
+
+            const door = new Door(roomOneNumber.roomNumber, roomTwoNumber.roomNumber);
+            roomOne.setSide(this.commonWall(roomOne, roomTwo), door);
+            roomTwo.setSide(this.commonWall(roomOne, roomTwo), door);
+
+            return;
+        }
     }
 }
