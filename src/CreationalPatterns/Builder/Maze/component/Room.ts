@@ -1,13 +1,40 @@
+import { MapSite } from '../config/MapSite';
+import { Direction } from '../config/Direction';
+
 export class Room {
-    protected static roomCount = 1;
-    protected numberOfRooms: number;
+    #up!: MapSite;
+    #down!: MapSite;
+    #right!: MapSite;
+    #left!: MapSite;
 
     constructor(private roomNumber: number) {
-        this.numberOfRooms = Room.roomCount++;
-        console.log(`Creating a room ${this.roomNumber}`);
+        console.log(`Creating a Room# ${this.roomNumber}`);
+    }
+
+    setSide(direction: Direction, site: MapSite): void {
+        switch (direction) {
+            case Direction.North:
+                this.#up = site;
+                break;
+            case Direction.South:
+                this.#down = site;
+                break;
+            case Direction.West:
+                this.#left = site;
+                break;
+            case Direction.East:
+                this.#right = site;
+        }
+
+        console.log(`setting ${direction.toString()} side of ${this.toString()} to ${site.toString()}`);
     }
 
     toString(): string {
-        return `Room# ${this.numberOfRooms}`;
+        return `Room# ${this.roomNumber}`;
+    }
+
+    getRoom(): Room {
+        console.log(`Getting room# ${this.roomNumber.toString()}`);
+        return this;
     }
 }

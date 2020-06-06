@@ -3,24 +3,21 @@ import { MazeBuilderInterface } from './MazeBuilderInterface';
 import { Room } from '../component/Room';
 import { Maze } from '../config/Maze';
 
-export class MazeBuilder implements MazeBuilderInterface<MazeBuilder> {
-    private aMaze: Maze = '';
-
+export class MazeBuilder implements MazeBuilderInterface {
+    protected currentMaze!: Maze;
     buildMaze(): void {
-        this.aMaze = new Maze();
+        this.currentMaze = new Maze();
     }
 
-    buildRoom(room: number): MazeBuilder {
-        new Room(room);
-        return this;
+    buildRoom(roomNumber: number): void {
+        new Room(roomNumber);
     }
 
-    buildDoor(rFrom: number, rTo: number): MazeBuilder {
+    buildDoor(rFrom: number, rTo: number): void {
         new Door(rFrom, rTo);
-        return this;
     }
 
     getMaze(): Maze {
-        return this.aMaze;
+        return this.currentMaze;
     }
 }
