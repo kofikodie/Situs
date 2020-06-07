@@ -6,18 +6,18 @@ export class MazeGame {
     constructor(private mazeGameBuilder: MazeBuilder, private mazeComplexGameBuilder: ComplexMazeBuilder) {}
 
     createMaze(): Maze {
+        this.mazeGameBuilder.buildMaze();
         this.mazeGameBuilder.buildRoom(3);
         this.mazeGameBuilder.buildRoom(5);
         this.mazeGameBuilder.buildDoor(3, 5);
-        this.mazeGameBuilder.buildMaze();
 
         return this.mazeGameBuilder.getMaze();
     }
 
     createMazeWithoutDoor(): Maze {
+        this.mazeGameBuilder.buildMaze();
         this.mazeGameBuilder.buildRoom(6);
         this.mazeGameBuilder.buildRoom(10);
-        this.mazeGameBuilder.buildMaze();
 
         return this.mazeGameBuilder.getMaze();
     }
