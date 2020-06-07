@@ -1,9 +1,14 @@
 import { MazeBuilder } from '../builder/MazeBuilder';
-import { Maze } from './Maze';
 import { ComplexMazeBuilder } from '../builder/ComplexMazeBuilder';
+import { CountingMazeBuilder } from '../builder/CountingMazeBuilder';
+import { Maze } from './Maze';
 
 export class MazeGame {
-    constructor(private mazeGameBuilder: MazeBuilder, private mazeComplexGameBuilder: ComplexMazeBuilder) {}
+    constructor(
+        private mazeGameBuilder: MazeBuilder,
+        private mazeComplexGameBuilder: ComplexMazeBuilder,
+        private countingMazeBuilder: CountingMazeBuilder,
+    ) {}
 
     createMaze(): Maze {
         this.mazeGameBuilder.buildMaze();
@@ -29,5 +34,15 @@ export class MazeGame {
         this.mazeComplexGameBuilder.buildDoor(roomOne, roomTwo);
 
         return this.mazeComplexGameBuilder.getMaze();
+    }
+
+    planMaze(): string {
+        this.countingMazeBuilder.buildMaze();
+        this.countingMazeBuilder.buildRoom(67);
+        this.countingMazeBuilder.buildRoom(670);
+        this.countingMazeBuilder.buildDoor(67, 670);
+
+        const [room, door] = this.countingMazeBuilder.getCounts();
+        return `This maze will have ${room} rooms and ${door} door(s)`;
     }
 }
