@@ -18,22 +18,17 @@ Define an interface for creating an object, but lets subclasses decide which cla
 
 -   _ConcreteProduct_
 
-    -   constructs and assemblies parts of the "Product" by implementing the builder interface.
-    -   defines and keeps track of the representation it creates.
-    -   provides an interface for retrieving the product.
+    -   implements the Product interface
 
--   _Director_
+-   _Creator_
 
-    -   constructs an object using the Builder interface.
+    -   declares the factory method, which returns an object of type "Product". Creator may also define a default implementation of the factory method that returns a defualt "ConcreteProduct" object
+    -   may call the factory method to create a "Product" object.
 
--   _Product_
+-   _ConcreteCreator_
 
-    -   rapresents the complex object under construction. "ConcreteBuilder" builds the product internal representation and defines the process by which it's assembled.
-    -   includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
+    -   overrides the factory method to return an instance of a "ConcreteProduct".
 
 ### Colaborations
 
--   the clients creates the Director object and configures it with the desired Builder object.
--   Director notifies the builder whenever a part of the product should be built.
--   Builder handles request from the director and adds parts to the product.
--   the client retrieves the product from the builder.
+-   "Creator" relies on its subclasses to define the factory method so that it returns an instance of the appropriate "ConcreteProduct".
