@@ -23,7 +23,7 @@ Separate the construction of a complex object from its representation so that th
 
 -   _Director_
 
-    -   contructor an object using the Builder interface.
+    -   constructs an object using the Builder interface.
 
 -   _Product_
 
