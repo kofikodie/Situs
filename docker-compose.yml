@@ -1,0 +1,27 @@
+version: "3"
+services:
+  abstractfactory:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/CreationalPatterns/AbstractFactory:/usr/src/app
+  builder:
+    image: builder
+    build:
+      dockerfile: .docker/Dockerfile
+      context: .
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./src/CreationalPatterns/Builder:/usr/src/app
+  factorymethod:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: .
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./src/CreationalPatterns/FactoryMethod:/usr/src/app
