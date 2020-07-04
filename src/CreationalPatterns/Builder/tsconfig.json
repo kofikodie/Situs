@@ -1,3 +1,10 @@
 {
-    "extends": "../../../tsconfig"
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ESNext",
+        "sourceMap": true,
+        "outDir": ".dist",
+        "strict": true,
+        "alwaysStrict": true
+    }
 }
