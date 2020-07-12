@@ -1,0 +1,17 @@
+export default class Door {
+    private static doorCount = 1
+    #doorNumber: number
+
+    constructor(private roomFrom: number, private roomTo: number) {
+        this.#doorNumber = Door.doorCount++
+        console.log(
+            `Creating a Door# ${
+                this.#doorNumber
+            } needing spell between room# ${this.roomFrom.toString()} and room# ${this.roomTo.toString()}`,
+        )
+    }
+
+    toString(): string {
+        return `Door# with spell ${this.#doorNumber}`
+    }
+}
