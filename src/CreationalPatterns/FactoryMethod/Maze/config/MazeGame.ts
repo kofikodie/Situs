@@ -30,8 +30,8 @@ export default class MazeGame {
         return new Maze()
     }
 
-    makeRoom(numberOfRooms: number): Room {
-        return new Room(numberOfRooms)
+    makeRoom(roomNumber: number): Room {
+        return new Room(roomNumber)
     }
 
     makeWall(): Wall {

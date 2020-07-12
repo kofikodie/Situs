@@ -1,4 +1,6 @@
 import MazeGame from './config/MazeGame'
+import BombedMazeGame from './config/BombedMazeGame'
 
-const mazeGame = new MazeGame()
-mazeGame.createMaze()
+new MazeGame().createMaze()
+console.log('\n')
+new BombedMazeGame().createMaze()
