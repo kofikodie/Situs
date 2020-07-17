@@ -1,6 +1,6 @@
-import MazeGame from './config/MazeGame'
 import BombedMazeGame from './config/BombedMazeGame'
 import EnchantedMazeGame from './config/EnchantedMazeGame'
+import MazeGame from './config/MazeGame'
 
 new MazeGame().createMaze()
 console.log('\n')

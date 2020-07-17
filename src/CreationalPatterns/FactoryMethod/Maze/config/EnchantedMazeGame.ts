@@ -1,10 +1,10 @@
-import MazeGame from './MazeGame'
-
-import Spell from '../component/Spell'
-import EnchantedRoom from '../component/enchanted/EnchantedRoom'
-import { Room } from '../component/Room'
-import DoorNeedingSpell from '../component/spell/DoorNeedingSpell'
 import { Door } from '../component/Door'
+import { Room } from '../component/Room'
+import Spell from '../component/Spell'
+
+import EnchantedRoom from '../component/enchanted/EnchantedRoom'
+import DoorNeedingSpell from '../component/spell/DoorNeedingSpell'
+import MazeGame from './MazeGame'
 
 export default class EnchantedMazeGame extends MazeGame {
     makeRoom(roomNumber: number): Room

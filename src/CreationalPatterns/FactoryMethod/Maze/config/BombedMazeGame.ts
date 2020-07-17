@@ -1,7 +1,7 @@
-import MazeGame from './MazeGame'
-import BombedWall from '../component/bombed/BombedWall'
-import BombedRoom from '../component/bombed/BombedRoom'
 import { Room } from '../component/Room'
+import BombedRoom from '../component/bombed/BombedRoom'
+import BombedWall from '../component/bombed/BombedWall'
+import MazeGame from './MazeGame'
 
 export default class BombedMazeGame extends MazeGame {
     makeWall(): BombedWall {
