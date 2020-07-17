@@ -1,7 +1,7 @@
+import { Door } from '../components/Door';
+import { Room } from '../components/Room';
 import { Wall } from '../components/Wall';
 import { Maze } from '../config/Maze';
-import { Room } from '../components/Room';
-import { Door } from '../components/Door';
 import { FactoryInterface } from '../interface/FactoryInterface';
 
 export class MazeFactory implements FactoryInterface<MazeFactory> {

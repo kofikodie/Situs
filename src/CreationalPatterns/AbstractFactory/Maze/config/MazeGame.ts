@@ -1,9 +1,9 @@
-import { Maze } from './Maze';
-import { Direction } from './Direction';
+import { BombedMazeFactory } from '../factory/BombedMazeFactory';
 import { MazeFactory } from '../factory/MazeFactory';
 import { FactoryInterface } from '../interface/FactoryInterface';
-import { BombedMazeFactory } from '../factory/BombedMazeFactory';
 import { WallInterface } from '../interface/WallInterface';
+import { Direction } from './Direction';
+import { Maze } from './Maze';
 
 export class MazeGame<T extends MazeFactory | BombedMazeFactory> {
     constructor(private wall: WallInterface) {}
