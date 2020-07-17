@@ -1,8 +1,8 @@
-import { MazeBuilder } from './MazeBuilder';
-import { Room } from '../component/Room';
-import { Direction } from '../config/Direction';
-import { Wall } from '../component/Wall';
 import { Door } from '../component/Door';
+import { Room } from '../component/Room';
+import { Wall } from '../component/Wall';
+import { Direction } from '../config/Direction';
+import { MazeBuilder } from './MazeBuilder';
 
 export class ComplexMazeBuilder extends MazeBuilder {
     commonWall(roomOne: Room, roomTwo: Room): Direction {

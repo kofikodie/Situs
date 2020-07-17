@@ -1,6 +1,6 @@
-import { MazeBuilder } from '../builder/MazeBuilder';
 import { ComplexMazeBuilder } from '../builder/ComplexMazeBuilder';
 import { CountingMazeBuilder } from '../builder/CountingMazeBuilder';
+import { MazeBuilder } from '../builder/MazeBuilder';
 import { Maze } from './Maze';
 
 export class MazeGame {

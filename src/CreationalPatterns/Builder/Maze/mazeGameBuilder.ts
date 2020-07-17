@@ -1,7 +1,7 @@
-import { MazeGame } from './config/MazeGame';
-import { MazeBuilder } from './builder/MazeBuilder';
 import { ComplexMazeBuilder } from './builder/ComplexMazeBuilder';
 import { CountingMazeBuilder } from './builder/CountingMazeBuilder';
+import { MazeBuilder } from './builder/MazeBuilder';
+import { MazeGame } from './config/MazeGame';
 
 const mazeGame = new MazeGame(new MazeBuilder(), new ComplexMazeBuilder(), new CountingMazeBuilder());
 console.log('Build a Maze');

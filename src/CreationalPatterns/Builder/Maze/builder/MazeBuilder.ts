@@ -1,7 +1,7 @@
 import { Door } from '../component/Door';
-import { MazeBuilderInterface } from './MazeBuilderInterface';
 import { Room } from '../component/Room';
 import { Maze } from '../config/Maze';
+import { MazeBuilderInterface } from './MazeBuilderInterface';
 
 export class MazeBuilder implements MazeBuilderInterface {
     protected currentMaze!: Maze;
