@@ -23,10 +23,6 @@ export class ComplexMazeBuilder extends MazeBuilder {
         return room;
     }
 
-    buildDoor(roomOneNumber: number, roomTwoNumber: number): void;
-
-    buildDoor(roomOneNumber: Room, roomTwoNumber: Room): void;
-
     buildDoor(roomOneNumber: number | Room, roomTwoNumber: number | Room): void {
         if (typeof roomOneNumber !== 'number' && typeof roomTwoNumber !== 'number') {
             const roomOne = roomOneNumber.getRoom();
