@@ -5,6 +5,7 @@
         "sourceMap": true,
         "outDir": ".dist",
         "strict": true,
-        "alwaysStrict": true
+        "alwaysStrict": true,
+        "esModuleInterop": true
     }
 }
