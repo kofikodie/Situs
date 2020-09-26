@@ -21,15 +21,15 @@
     "license": "ISC",
     "homepage": "https://github.com/kofikodie/packtpub-bot#readme",
     "devDependencies": {
-        "@types/clone": "^0.1.30",
-        "@types/node": "^14.0.23",
+        "@types/clone": "^2.1.0",
+        "@types/node": "^14.11.2",
         "@typescript-eslint/eslint-plugin": "^3.6.1",
         "@typescript-eslint/parser": "^3.6.1",
         "clone": "^2.1.2",
         "eslint": "^7.5.0",
         "eslint-plugin-import": "^2.22.0",
-        "prettier": "^2.0.5",
-        "ts-node": "^8.10.2",
-        "typescript": "^3.9.7"
+        "prettier": "^2.1.2",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.3"
     }
 }
