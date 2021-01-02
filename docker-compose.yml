@@ -25,3 +25,11 @@ services:
       - "3002:3000"
     volumes:
       - ./src/CreationalPatterns/FactoryMethod:/usr/src/app
+  prototype:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: .
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./src/Prototype:/usr/src/app
