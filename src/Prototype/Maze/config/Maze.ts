@@ -1,6 +1,6 @@
-import { Room } from '../components/Room'
+import Room from '../components/Room'
 
-export class Maze {
+export default class Maze {
     #rooms: Set<Room> = new Set<Room>()
 
     constructor() {

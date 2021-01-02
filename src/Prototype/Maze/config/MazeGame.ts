@@ -1,16 +1,17 @@
-import MazePrototypeFactory from "../factory/MazePrototypeFactory";
-import { Direction } from "./Direction";
+import MazePrototypeFactory from '../factory/MazePrototypeFactory'
+import { Direction } from './Direction'
 
 export default class MazeGame {
     createMaze(simpleMazeFactory: MazePrototypeFactory): void {
-        //const aMaze = simpleMazeFactory.makeMaze()
+        const aMaze = simpleMazeFactory.makeMaze()
 
         const roomOne = simpleMazeFactory.makeRoom()
         const roomTwo = simpleMazeFactory.makeRoom()
         const theDoor = simpleMazeFactory.makeDoor()
+        theDoor.initialize(roomOne, roomTwo)
 
-        //aMaze.addRoom(roomOne)
-        //aMaze.addRoom(roomTwo)
+        aMaze.addRoom(roomOne)
+        aMaze.addRoom(roomTwo)
 
         roomOne.setSide(Direction.North, simpleMazeFactory.makeWall())
         roomOne.setSide(Direction.East, theDoor)
@@ -22,4 +23,4 @@ export default class MazeGame {
         roomTwo.setSide(Direction.East, simpleMazeFactory.makeWall())
         roomTwo.setSide(Direction.South, theDoor)
     }
-} 
+}

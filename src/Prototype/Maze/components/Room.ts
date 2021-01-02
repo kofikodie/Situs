@@ -1,19 +1,18 @@
 import { Direction } from '../config/Direction'
-import { MapSite } from '../config/MapSite'
+import MapSite from '../config/MapSite'
 
-export class Room extends MapSite {
+export default class Room extends MapSite {
     protected static roomCount = 1
     protected roomNumber: number
-
     #up?: MapSite
     #down?: MapSite
     #right?: MapSite
     #left?: MapSite
 
-    constructor() {
+    constructor(roomType = 'room') {
         super()
         this.roomNumber = Room.roomCount++
-        console.log(`Creating a room ${this.roomNumber}`)
+        console.log(`Creating a ${roomType} ${this.roomNumber}`)
     }
 
     setSide(direction: Direction, site: MapSite): void {

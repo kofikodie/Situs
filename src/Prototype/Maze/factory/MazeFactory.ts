@@ -1,10 +1,9 @@
-import { Door } from '../components/Door'
-import { Room } from '../components/Room'
-import { Wall } from '../components/Wall'
-import { Maze } from '../config/Maze'
-import { FactoryInterface } from '../interface/FactoryInterface'
+import Door from '../components/Door'
+import Room from '../components/Room'
+import Wall from '../components/Wall'
+import Maze from '../config/Maze'
 
-export class MazeFactory implements FactoryInterface<MazeFactory> {
+export default class MazeFactory {
     makeMaze(): Maze {
         return new Maze()
     }
@@ -17,7 +16,7 @@ export class MazeFactory implements FactoryInterface<MazeFactory> {
         return new Room()
     }
 
-    makeDoor(roomOne: Room, roomTwo: Room): Door {
-        return new Door(roomOne, roomTwo)
+    makeDoor(): Door {
+        return new Door()
     }
 }

@@ -1,13 +1,19 @@
-import { Door } from './components/Door'
-import { Room } from './components/Room'
+import Door from './components/Door'
+import Room from './components/Room'
 import MazeGame from './config/MazeGame'
 import MazePrototypeFactory from './factory/MazePrototypeFactory'
-import { Wall } from './components/Wall'
-import { RoomWithABomb } from './components/boom/RoomWithBoom'
+import Wall from './components/Wall'
+import BombedRoom from './components/boom/BombedRoom'
+import BombedWall from './components/boom/BombedWall'
 
 const amaze = new MazeGame()
 
-amaze.createMaze(new MazePrototypeFactory(new Wall, new Door(new Room(), new Room)))
-console.log('\nA maze with a bomed \n')
-amaze.createMaze(new MazePrototypeFactory(new Wall, new Door(new RoomWithABomb(), new Room)))
+const prototypeDoor = new Door()
+prototypeDoor.initialize(new Room(), new Room())
+amaze.createMaze(new MazePrototypeFactory(new Wall(), new Door()))
 
+console.log('\nA maze with a bomed \n')
+
+const prototypeBombedDoor = new Door().clone()
+prototypeBombedDoor.initialize(new BombedRoom(), new BombedRoom())
+amaze.createMaze(new MazePrototypeFactory(new BombedWall(), prototypeBombedDoor))

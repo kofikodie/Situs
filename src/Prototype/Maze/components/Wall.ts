@@ -1,10 +1,10 @@
-import { MapSite } from '../config/MapSite'
-import { WallInterface } from '../interface/WallInterface'
+import MapSite from '../config/MapSite'
 
-export class Wall extends MapSite implements WallInterface {
-    constructor() {
+export default class Wall extends MapSite {
+
+    constructor(wallType = 'Wall') {
         super()
-        console.log(`creating a Wall`)
+        console.log(`creating a ${wallType}`)
     }
 
     toString(): string {
