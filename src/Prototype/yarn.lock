@@ -3,7 +3,7 @@
 
 __metadata:
   version: 4
-  cacheKey: 5
+  cacheKey: 7
 
 "@babel/code-frame@npm:^7.0.0":
   version: 7.10.4
@@ -29,13 +29,6 @@ __metadata:
     chalk: ^2.0.0
     js-tokens: ^4.0.0
   checksum: c167b938af9797e7630dd922398ceb1a079469085b9c0a7274f093f9f2b1ef9f0a5efec89592e81cbab7c87a537d32c238cea97d288b7af9a0d26b2bceb7a439
-  languageName: node
-  linkType: hard
-
-"@types/clone@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@types/clone@npm:2.1.0"
-  checksum: 63fe0d755f41eb46e7cf55ab54ac4ef9fa399cd4bdc8b41083f1ec4c862781d8f3246133ea8e33bdb6ed06f844e2a9935edb659f86235a0d24d30734ad76f884
   languageName: node
   linkType: hard
 
@@ -329,13 +322,6 @@ __metadata:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
   checksum: f860285b419f9e925c2db0f45ffa88aa8794c14b80cc5d01ff30930bcfc384996606362706f0829cf557f6d36152a5fb2d227ad63c4bc90e2ec9e9dbed4a3c07
-  languageName: node
-  linkType: hard
-
-"clone@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "clone@npm:2.1.2"
-  checksum: 85232d66015d2d703dc59812e30049931d97c7815bf70569ae4fb7a66be257f46fcf47040e4e7050966ca195a9e615d59d73ba9e39fc37eedba1a76865f27ab1
   languageName: node
   linkType: hard
 
@@ -1310,11 +1296,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "prototyoe@workspace:."
   dependencies:
-    "@types/clone": ^2.1.0
     "@types/node": ^14.11.2
     "@typescript-eslint/eslint-plugin": ^3.6.1
     "@typescript-eslint/parser": ^3.6.1
-    clone: ^2.1.2
     eslint: ^7.5.0
     eslint-plugin-import: ^2.22.0
     prettier: ^2.1.2
@@ -1675,11 +1659,11 @@ typescript@^4.0.3:
 
 "typescript@patch:typescript@^4.0.3#builtin<compat/typescript>":
   version: 4.0.3
-  resolution: "typescript@patch:typescript@npm%3A4.0.3#builtin<compat/typescript>::version=4.0.3&hash=5b02a2"
+  resolution: "typescript@patch:typescript@npm%3A4.0.3#builtin<compat/typescript>::version=4.0.3&hash=cc6730"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 72db87d09f728c83062d64b5e12ed52effb6278963b6bc5c006219b22c104e02b8ce80164261de554923d3c47d894a1ca937ed542328caccb83ebaedeae98a69
+  checksum: c92843a6af50170f49158b6eb5726b80c5c22074a337d066eee278a7d08d1109667e435e96207ab1314f63f4629555e89c26645ef55b937ea6baf80d190768f6
   languageName: node
   linkType: hard
 
