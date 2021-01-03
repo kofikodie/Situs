@@ -33,3 +33,11 @@ services:
       - "3003:3000"
     volumes:
       - ./src/Prototype:/usr/src/app
+  singleton:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: .
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./src/CreationalPatterns/Singleton:/usr/src/app
