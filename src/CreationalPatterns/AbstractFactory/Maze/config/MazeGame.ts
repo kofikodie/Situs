@@ -5,10 +5,10 @@ import { WallInterface } from '../interface/WallInterface';
 import { Direction } from './Direction';
 import { Maze } from './Maze';
 
-export class MazeGame<T extends MazeFactory | BombedMazeFactory> {
+export class MazeGame {
     constructor(private wall: WallInterface) {}
 
-    createMaze<T>(factor: FactoryInterface<T>): Maze {
+    createMaze<T extends MazeFactory | BombedMazeFactory>(factor: FactoryInterface<T>): Maze {
         const maze = factor.makeMaze();
         const roomOne = factor.makeRoom();
         const roomTwo = factor.makeRoom();
