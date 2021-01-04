@@ -3,10 +3,10 @@ import Room from '../components/Room';
 import BombedWall from '../components/bomed/BombedWall';
 import RoomWithABomb from '../components/bomed/RoomWithABomb';
 import Maze from '../config/Maze';
-import FactoryInterface from '../interface/FactoryInterface';
 import Wall from '../components/Wall';
+import MazeFactory from './MazeFactory';
 
-export default class BombedMazeFactory implements FactoryInterface<BombedMazeFactory> {
+export default class BombedMazeFactory extends MazeFactory {
     makeMaze(): Maze {
         return new Maze();
     }

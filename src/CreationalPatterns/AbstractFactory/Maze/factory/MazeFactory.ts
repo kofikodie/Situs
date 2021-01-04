@@ -4,7 +4,7 @@ import Wall from '../components/Wall';
 import Maze from '../config/Maze';
 import FactoryInterface from '../interface/FactoryInterface';
 
-export default class MazeFactory implements FactoryInterface<MazeFactory> {
+export default class MazeFactory implements FactoryInterface {
     makeMaze(): Maze {
         return new Maze();
     }
