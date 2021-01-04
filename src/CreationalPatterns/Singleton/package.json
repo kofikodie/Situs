@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "simplicity is the ultimate sophistication",
   "main": "index.js",
+  "scripts": {
+    "pretty": "rome check",
+    "pretty-fix": "rome check --apply",
+    "pretty-review": "rome check --review",
+    "start": "ts-node Maze/MazeGameBuilder.ts"
+  },
   "repository": "https://github.com/kofikodie/Situs",
   "author": "kodie @k.kodieaddo@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.19",
+    "rome": "^10.0.4-beta",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
 }

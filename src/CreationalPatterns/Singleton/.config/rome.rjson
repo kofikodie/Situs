@@ -1,0 +1,13 @@
+// For configuration documentation see http://romefrontend.dev/#project-configuration
+name: "app"
+lint: {
+	ignore: [
+		".yarn"
+		".config"
+		".vscode"
+		"tsconfig.json"
+		"pnp.js"
+		".pnp.js"
+]
+}
+root: true
