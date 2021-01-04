@@ -1,7 +1,7 @@
 import { Door } from '../component/Door'
 import { Room } from '../component/Room'
 import { Wall } from '../component/Wall'
-import { Direction } from './Direction'
+import { Direction } from '../map/Direction'
 import { Maze } from './Maze'
 
 export default class MazeGame {

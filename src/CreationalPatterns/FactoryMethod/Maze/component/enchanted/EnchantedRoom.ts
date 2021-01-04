@@ -1,5 +1,5 @@
-import { Direction } from '../../config/Direction'
-import { MapSite } from '../../config/MapSite'
+import { Direction } from '../../map/Direction'
+import { MapSite } from '../../map/MapSite'
 import Spell from '../Spell'
 
 export default class EnchantedRoom {

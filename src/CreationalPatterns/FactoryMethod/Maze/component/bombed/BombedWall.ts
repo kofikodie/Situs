@@ -1,4 +1,4 @@
-import { MapSite } from '../../config/MapSite'
+import { MapSite } from '../../map/MapSite'
 
 export default class BombedWall extends MapSite {
     constructor() {

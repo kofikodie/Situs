@@ -1,4 +1,4 @@
-import { MapSite } from '../config/MapSite'
+import { MapSite } from '../map/MapSite'
 
 export default class Wall extends MapSite {
     constructor() {
