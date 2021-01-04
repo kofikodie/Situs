@@ -1,4 +1,4 @@
-import MapSite from '../config/MapSite';
+import MapSite from '../map/MapSite';
 import Room from './Room';
 
 export default class Door extends MapSite {

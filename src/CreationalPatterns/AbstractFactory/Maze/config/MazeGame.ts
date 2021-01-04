@@ -1,12 +1,10 @@
 import BombedMazeFactory from '../factory/BombedMazeFactory';
 import MazeFactory from '../factory/MazeFactory';
-import FactoryInterface from '../interface/FactoryInterface';
-import { WallInterface } from '../interface/WallInterface';
-import { Direction } from './Direction';
+import { Direction } from '../map/Direction';
 import Maze from './Maze';
 
 export default class MazeGame {
-    createMaze<T extends MazeFactory | BombedMazeFactory>(mazeFactory: FactoryInterface<T>): Maze {
+    createMaze<T extends MazeFactory | BombedMazeFactory>(mazeFactory: T): Maze {
         const maze = mazeFactory.makeMaze();
         const roomOne = mazeFactory.makeRoom();
         const roomTwo = mazeFactory.makeRoom();

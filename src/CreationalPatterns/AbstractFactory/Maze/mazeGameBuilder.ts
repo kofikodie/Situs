@@ -1,5 +1,3 @@
-import Wall from './components/Wall';
-import BombedWall from './components/bomed/BombedWall';
 import MazeGame from './config/MazeGame';
 import BombedMazeFactory from './factory/BombedMazeFactory';
 import MazeFactory from './factory/MazeFactory';
