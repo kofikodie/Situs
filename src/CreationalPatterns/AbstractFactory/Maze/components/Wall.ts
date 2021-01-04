@@ -1,8 +1,6 @@
-import { WallInterface } from '../interface/WallInterface';
-
-export class Wall implements WallInterface {
-    constructor() {
-        console.log(`creating a Wall`);
+export default class Wall {
+    constructor(private wallName = `creating a Wall`) {
+        console.log(this.wallName);
     }
 
     toString(): string {

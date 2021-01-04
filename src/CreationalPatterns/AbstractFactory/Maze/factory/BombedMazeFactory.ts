@@ -1,20 +1,21 @@
-import { Door } from '../components/Door';
-import { Room } from '../components/Room';
-import { BombedWall } from '../components/bomed/BombedWall';
-import { RoomWithABomb } from '../components/bomed/RoomWithABomb';
-import { Maze } from '../config/Maze';
-import { FactoryInterface } from '../interface/FactoryInterface';
+import Door from '../components/Door';
+import Room from '../components/Room';
+import BombedWall from '../components/bomed/BombedWall';
+import RoomWithABomb from '../components/bomed/RoomWithABomb';
+import Maze from '../config/Maze';
+import FactoryInterface from '../interface/FactoryInterface';
+import Wall from '../components/Wall';
 
-export class BombedMazeFactory implements FactoryInterface<BombedMazeFactory> {
+export default class BombedMazeFactory implements FactoryInterface<BombedMazeFactory> {
     makeMaze(): Maze {
         return new Maze();
     }
 
-    makeWall(): BombedWall {
+    makeWall(): Wall {
         return new BombedWall();
     }
 
-    makeRoom(): RoomWithABomb {
+    makeRoom(): Room {
         return new RoomWithABomb();
     }
 

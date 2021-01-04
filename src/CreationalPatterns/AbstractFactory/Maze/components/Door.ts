@@ -1,7 +1,7 @@
-import { MapSite } from '../config/MapSite';
-import { Room } from './Room';
+import MapSite from '../config/MapSite';
+import Room from './Room';
 
-export class Door extends MapSite {
+export default class Door extends MapSite {
     private static doorCount = 1;
     #doorNumber: number;
     constructor(private roomOne: Room, private roomTwo: Room) {

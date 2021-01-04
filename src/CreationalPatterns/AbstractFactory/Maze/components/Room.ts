@@ -1,14 +1,14 @@
 import { Direction } from '../config/Direction';
-import { MapSite } from '../config/MapSite';
+import MapSite from '../config/MapSite';
 
-export class Room extends MapSite {
+export default class Room extends MapSite {
     protected static roomCount = 1;
     protected roomNumber: number;
 
-    #up?: MapSite;
-    #down?: MapSite;
-    #right?: MapSite;
-    #left?: MapSite;
+    #up!: MapSite;
+    #down!: MapSite;
+    #right!: MapSite;
+    #left!: MapSite;
 
     constructor() {
         super();

@@ -1,8 +1,9 @@
 import { WallInterface } from '../../interface/WallInterface';
+import Wall from '../Wall';
 
-export class BombedWall implements WallInterface {
+export default class BombedWall extends Wall {
     constructor() {
-        console.log(`creating a Bomb wall`);
+        super(`creating a Bomb wall`)
     }
 
     toString(): string {

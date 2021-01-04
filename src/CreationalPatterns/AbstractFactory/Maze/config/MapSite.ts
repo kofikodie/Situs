@@ -1,1 +1,1 @@
-export abstract class MapSite {}
+export default abstract class MapSite {}
