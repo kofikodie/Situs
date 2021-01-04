@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/kofikodie/packtpub-bot.git"
+        "url": "git+https://github.com/kofikodie/Situs.git"
     },
     "keywords": [
         "typescript"
     ],
     "author": "kodie @k.kodieaddo@gmail.com",
     "license": "ISC",
-    "homepage": "https://github.com/kofikodie/packtpub-bot#readme",
+    "homepage": "https://github.com/kofikodie/Situs#readme",
     "devDependencies": {
         "@types/node": "^14.0.23",
         "@typescript-eslint/eslint-plugin": "^3.6.1",
