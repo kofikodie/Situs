@@ -9,7 +9,8 @@ export default class MazeGame {
         const roomOne = mazeFactory.makeRoom();
         const roomTwo = mazeFactory.makeRoom();
         const theDoor = mazeFactory.makeDoor(roomOne, roomTwo);
-        const wall = mazeFactory.makeWall()
+        const wall = mazeFactory.makeWall();
+        
         maze.addRoom(roomOne);
         maze.addRoom(roomTwo);
 
