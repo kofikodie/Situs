@@ -1,0 +1,12 @@
+{
+  "name": "adapter",
+  "version": "1.0.0",
+  "description": "simplicity is the ultimate sophistication",
+  "main": "index.js",
+  "repository": "https://github.com/kofikodie/Situs",
+  "author": "kodie @k.kodieaddo@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
