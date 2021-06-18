@@ -1,0 +1,105 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "import"],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "."
+    },
+    "rules": {
+        "arrow-body-style": ["error", "as-needed"],
+        "no-unused-expressions": "error",
+        "func-names": "error",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "ignore"
+            }
+        ],
+        "import/order": [
+            "warn",
+            {
+                "groups": ["external", "builtin", "parent", "sibling", "index"],
+                "pathGroups": [
+                    {
+                        "pattern": "*.scss",
+                        "group": "parent",
+                        "position": "after"
+                    }
+                ],
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ],
+        "complexity": ["warn", 3],
+        "curly": "error",
+        "default-case": "off",
+        "dot-notation": "error",
+        "eqeqeq": "error",
+        "guard-for-in": "error",
+        "no-bitwise": "error",
+        "no-eq-null": "error",
+        "no-extend-native": "error",
+        "no-implicit-coercion": "error",
+        "no-implicit-globals": "error",
+        "no-invalid-this": "off",
+        "no-lone-blocks": "error",
+        "no-nested-ternary": "error",
+        "no-unneeded-ternary": "error",
+        "no-param-reassign": "error",
+        "no-shadow": [
+            "error",
+            {
+                "hoist": "all"
+            }
+        ],
+        "no-undef-init": "error",
+        "no-unused-vars": "error",
+        "no-useless-call": "error",
+        "no-useless-concat": "error",
+        "no-var": "error",
+        "no-void": "error",
+        "new-cap": [
+            "error",
+            {
+                "newIsCap": true,
+                "capIsNew": false
+            }
+        ],
+        "prefer-arrow-callback": "error",
+        "prefer-const": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "no-prototype-builtins": "error",
+        "prefer-destructuring": "error",
+        "no-else-return": "error",
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/prefer-optional-chain": "error",
+        "@typescript-eslint/prefer-as-const": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-misused-promises": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/prefer-includes": "error",
+        "@typescript-eslint/prefer-regexp-exec": "error",
+        "@typescript-eslint/prefer-string-starts-ends-with": "error",
+        "@typescript-eslint/require-await": "error",
+        "@typescript-eslint/unbound-method": "error",
+        "no-useless-catch": "warn",
+        "@typescript-eslint/camelcase": "off"
+    },
+    "extends": [
+        "plugin:import/typescript",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ]
+}

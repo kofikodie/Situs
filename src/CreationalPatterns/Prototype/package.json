@@ -5,9 +5,9 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint . --ext .ts",
-        "lint-fix": "eslint . --fix --ext .ts",
+        "lint:fix": "eslint . --fix --ext .ts",
         "pretty": "prettier --check {*.ts,**/*.ts,**/**}",
-        "pretty-fix": "prettier --write {*.ts,**/*.ts,**/**}",
+        "pretty:fix": "prettier --write {*.ts,**/*.ts,**/**}",
         "start": "ts-node Maze/mazeGameBuilder.ts"
     },
     "repository": {
