@@ -13,7 +13,7 @@ Separate the construction of a complex object from its representation so that th
 
 -   _Builder_
 
-    -   specifies an abstract an inferface for creating parts of a "Product" object.
+    -   specifies an abstract or an interface for creating parts of a "Product" object.
 
 -   _ConcreteBuilder_
 
