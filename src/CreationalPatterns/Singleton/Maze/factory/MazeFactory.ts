@@ -15,11 +15,10 @@ export default class MazeFactory implements FactoryInterface {
 		if (undefined === MazeFactory.instance) {
 			return MazeFactory.instance = new MazeFactory();
 		}
-		if (undefined !== mazeStyle && "bombed" === mazeStyle) {
-			console.log("passo");
+		if ("bombed" === mazeStyle) {
 			return MazeFactory.instance = new BombedMazeFactory();
 		}
-		if (undefined !== mazeStyle && "enchanted" === mazeStyle) {
+		if ("enchanted" === mazeStyle) {
 			return MazeFactory.instance = new EnchantedMazeFactory();
 		}
 
