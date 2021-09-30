@@ -58,7 +58,7 @@
             }
         ],
         "no-undef-init": "error",
-        "no-unused-vars": "error",
+        "no-unused-vars": "warn",
         "no-useless-call": "error",
         "no-useless-concat": "error",
         "no-var": "error",
@@ -79,8 +79,8 @@
         "prefer-destructuring": "error",
         "no-else-return": "error",
         "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
-        "@typescript-eslint/no-explicit-any": "warn",
-        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/prefer-optional-chain": "error",
         "@typescript-eslint/prefer-as-const": "error",
         "@typescript-eslint/await-thenable": "error",
@@ -93,7 +93,8 @@
         "@typescript-eslint/require-await": "error",
         "@typescript-eslint/unbound-method": "error",
         "no-useless-catch": "warn",
-        "@typescript-eslint/camelcase": "off"
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
     },
     "extends": [
         "plugin:import/typescript",
