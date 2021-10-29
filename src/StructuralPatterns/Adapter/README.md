@@ -8,7 +8,7 @@ Convert the interface of a class into another interface clients expect. Adapter 
 
 -   you want to use an existing class, and its interface does not match the one you need.
 -   you want to create a reusable class that coorperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces.
--   you need to use several existing subclasses, but it's impratical to adapt their interface by subclassing every one. An object adapter can adapt the interface of its parent     class.
+-   you need to use several existing subclasses, but it's impratical to adapt their interface by subclassing every one. An object adapter can adapt the interface of its parent class.
 
 ### Participants
 
