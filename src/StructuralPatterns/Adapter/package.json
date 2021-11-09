@@ -11,7 +11,7 @@
     "lint-fix": "eslint . --fix --ext .ts src/",
     "pretty": "prettier --check src/",
     "pretty-fix": "prettier --write src/",
-    "start": "ts-node src/mazeGameBuilder.ts"
+    "start": "ts-node src/main.ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.13.0",
