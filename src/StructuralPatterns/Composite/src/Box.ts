@@ -1,30 +1,29 @@
-import Component from "./Component";
+import Order from "./Order"
 
 /**
  * The Composite class represents the complex components that may have children.
  * Usually, the Composite objects delegate the actual work to their children and
  * then "sum-up" the result.
  */
- export default class Composite extends Component {
-    protected children: Component[] = [];
+ export default class Box extends Order {
+    protected children: Order[] = []
 
     /**
      * A composite object can add or remove other components (both simple or
      * complex) to or from its child list.
      */
-    public add(component: Component): void {
-        this.children.push(component);
-        component.setParent(this);
+    public add(order: Order): void {
+        this.children.push(order)
+        order.setParent(this)
     }
 
-    public remove(component: Component): void {
-        const componentIndex = this.children.indexOf(component);
-        this.children.splice(componentIndex, 1);
-
+    public remove(order: Order): void {
+        const orderIndex = this.children.indexOf(order)
+        this.children.splice(orderIndex, 1)
     }
 
     public isComposite(): boolean {
-        return true;
+        return true
     }
 
     /**
@@ -33,12 +32,12 @@ import Component from "./Component";
      * their results. Since the composite's children pass these calls to their
      * children and so forth, the whole object tree is traversed as a result.
      */
-    public operation(): string {
-        const results = [];
+    public prize(): number {
+        const results = []
         for (const child of this.children) {
-            results.push(child.operation());
+            results.push(child.prize())
         }
 
-        return `Branch(${results.join('+')})`;
+        return results.reduce((partialSum, a) => partialSum + a, 0)
     }
 }

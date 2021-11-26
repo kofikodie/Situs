@@ -1,34 +1,37 @@
-import Component from "./src/Component";
-import Composite from "./src/Composite";
-import Leaf from "./src/Leaf";
+import Box from "./src/Box";
+import Order from "./src/Order";
+import Product from "./src/Product";
+import Shipping from "./src/Shipping";
 
 /**
  * The client code works with all of the components via the base interface.
  */
- function clientCode(component: Component): void {
-    console.log(`RESULT: ${component.operation()}`);
+ function clientCode(order: Order): void {
+    console.log(`TOTAL PRICE: ${order.prize()}`);
 }
 
 /**
- * This way the client code can support the simple leaf components...
+ * This way the client code can support a complex composites.
  */
-const simple = new Leaf();
-console.log('Client: I\'ve got a simple component:');
-clientCode(simple);
-console.log('');
+const orderBox = new Box();
+const shipping = new Shipping();
 
-/**
- * ...as well as the complex composites.
- */
-const tree = new Composite();
-const branch1 = new Composite();
-branch1.add(new Leaf());
-branch1.add(new Leaf());
-const branch2 = new Composite();
-branch2.add(new Leaf());
-tree.add(branch1);
-tree.add(branch2);
-tree.remove(branch1)
-console.log('Client: Now I\'ve got a composite tree:');
-clientCode(tree);
+const box1 = new Box();
+box1.add(new Product());
+box1.add(new Product());
+
+const box2 = new Box();
+box2.add(new Product());
+
+const box3 = new Box();
+box2.add(new Product());
+
+orderBox.add(box1);
+orderBox.add(box2);
+orderBox.add(box3);
+orderBox.remove(box3);
+orderBox.add(shipping);
+
+console.log('Client: Now I\'ve got a complete order:');
+clientCode(orderBox);
 console.log('');
