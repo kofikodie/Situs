@@ -24,7 +24,7 @@ const box2 = new Box();
 box2.add(new Product());
 
 const box3 = new Box();
-box2.add(new Product());
+box3.add(new Product());
 
 orderBox.add(box1);
 orderBox.add(box2);

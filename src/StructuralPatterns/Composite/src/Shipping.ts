@@ -7,5 +7,4 @@ export default class Shipping extends Order {
 
         return shippingCost
     }
-
 }

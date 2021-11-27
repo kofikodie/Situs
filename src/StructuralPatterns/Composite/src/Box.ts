@@ -18,7 +18,9 @@ import Order from "./Order"
     }
 
     public remove(order: Order): void {
+        console.log("sono qui: ", order)
         const orderIndex = this.children.indexOf(order)
+        console.log("sono qui: ", orderIndex)
         this.children.splice(orderIndex, 1)
     }
 
