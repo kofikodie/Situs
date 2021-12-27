@@ -2,7 +2,7 @@
  * The base Component class declares common operations for both simple and
  * complex objects of a composition.
  */
- export default abstract class Order {
+export default abstract class Order {
     protected parent!: Order
 
     /**

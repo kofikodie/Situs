@@ -5,7 +5,7 @@ import Order from "./Order"
  * Usually, the Composite objects delegate the actual work to their children and
  * then "sum-up" the result.
  */
- export default class Box extends Order {
+export default class Box extends Order {
     protected children: Order[] = []
 
     /**

@@ -6,7 +6,7 @@ import Shipping from "./src/Shipping";
 /**
  * The client code works with all of the components via the base interface.
  */
- function clientCode(order: Order): void {
+function clientCode(order: Order): void {
     console.log(`TOTAL PRICE: ${order.prize()}`);
 }
 
